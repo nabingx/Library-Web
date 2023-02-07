@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Online Library</title>
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+    <div class="head">
+        <h1><img src="../src/img/textLogo.png"></h1>
+    </div>
+    <hr>
+    <div class="content">
+        <div class="left_content">
+            <strong>Welcome to Online Library</strong>
+            <div class="mySlides fade">
+                <img src="../src/img/slideshow1.jpg" style="width:100%">
+                <div class="text">This Online Library project is created to manage and use the online library through the website</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="../src/img/slideshow2.jpg" style="width:100%">
+                <div class="text">This Online Library has been made by using PHP, JS scripts, PostgresSQL and CSS.</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="../src/img/slideshow3.jpg" style="width:100%">
+                <div class="text">This project provides 2 keys feature. One webpage for superusers(Admin), other for ordinary users</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="../src/img/slideshow4.jpg" style="width:100%">
+                <div class="text">This project was created by Big and Small Teams with crazy members</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="../src/img/slideshow5.jpg" style="width:100%">
+                <div class="text">Thanks to everyone that help us finish that project. Without you, we can't have today</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+        <div class="right_content">
+            <div class="admin_content">
+                <a href="Admin/admin_login.php"><button class="admin_login">Admin Login</button></a>
+                
+            </div>
+            <div class="user_content">
+                <label>User Login</label>
+                <a href="user_login.php"><button class="user_login" onclick="">User Login</button></a>
+                <a href="user_register.php"><button class="user_register">User Sign up</button></a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="footer"><p>Copyright © Library Management System 2023</p></div>
+    <script>
+        let slideIndex = 1;
+        let myTimeout;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            clearTimeout(myTimeout);
+            myTimeout = setTimeout(function() {plusSlides(1)}, 5000);
+        }
+        </script>
+</body>
+</html>

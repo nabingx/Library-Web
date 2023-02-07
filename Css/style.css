@@ -1,0 +1,248 @@
+html{
+    width: 100%;
+    min-width: 600px;
+    height: 680px;
+    background-image: url('../src/img/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+body{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin: 0%;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 100%;
+    height: 100%;
+}
+.head{
+    height: 90px;
+    width: 90%;
+    background-color: rgb(130, 172, 235);
+    border-radius: 5px;
+}   
+.head h1{
+    text-align: center;
+    color: black;
+}
+.content{
+    width: 90%;
+    height: 80%;
+    /* background-color:  rgb(130, 172, 235); */
+    border-radius: 5px;
+}
+.left_content{
+    float: left;
+    border-radius: 5px;
+    width: 65%;
+    height: 100%;
+    background-color:  rgb(130, 172, 235);
+    /* background-color: black; */
+}   
+.left_content strong{
+    
+    text-align: center;
+    padding-left: 5%;
+    font-size: 40px;
+    color: azure;
+}
+.right_content{
+    float: left;
+    border-radius: 5px;
+    
+    width: 35%;
+    height: 100%;
+}
+.admin_content{
+    width: 100%;
+    height: 50%;
+    background-image: url('../src/img/admin_icon.png');
+    border-radius: 5px;
+    offset: 10%;
+    /* background-color: purple; */
+}
+.admin_login{
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: 36%;
+    left: 65%;
+    font-size: 18px;
+    background-color: rgb(31,31,31);
+    border-radius: 5px;
+    border-width: 0.5px;
+    border-style: inset;
+    border-color: rgb(60, 165, 209);
+    color: azure;
+}
+
+.admin_login:hover{
+    border-color: white;
+}
+
+.user_login, .user_register{
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: 80%;
+    font-size: 18px;
+    background-color: rgb(189,203,204);
+    border-radius: 5px;
+    border-width: 0.5px;
+    border-style: inset;
+    border-color: rgb(31,31,31);
+    color:  rgb(31,31,31);
+}
+.user_login:hover, .user_register:hover{
+    border-color: rgb(60, 165, 209);
+}
+.user_login{
+    left: 65%;
+}
+.user_register{
+    left: 85%;
+}
+.user_content{
+    width: 100%;
+    height: 50%;
+    background-image: url('../src/img/user_login.jpg');
+    background-repeat: none;
+    background-size: cover;
+    border-radius: 5px;
+    /* background-color: white; */
+}
+.user_content label{
+    position: absolute;
+    top: 65%;
+    left: 73%;
+    font-size: 35px;
+
+}
+.footer{
+    width: 90%;
+    height: 50px;
+    background-color:rgb(130, 172, 235);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+hr{
+    border: none;
+    position: relative;
+}
+.footer p{
+    font-size: 15px;
+    text-align: center;
+    color: azure;
+}
+
+.mySlides {
+    padding-left: 7.5%;
+    width: 85%;
+    display: none;
+}
+
+.mySlides img{
+    padding-top: 5%;
+}
+  /* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 1%;
+    /* margin-top: -22px; */
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+  /* Position the "next button" to the right */
+.next {
+    right: 36.5%;
+    border-radius: 3px 0 0 3px;
+}
+  
+  /* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+  /* Caption text */
+.text {
+    color: azure;
+    font-size: 12px;
+    margin-top: -10%;
+    /* position: absolute; */
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+  
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin-top: 3%;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@media screen and (min-width: 1200px){
+    .left_content strong{
+        font-size: 40px;
+    }
+    .text {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1200px){
+    .left_content strong{
+        font-size: 35px;
+    }
+    .text {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px){
+    .left_content strong{
+        font-size: 26px;
+    }
+    .text {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 600px){
+    .left_content strong{
+        font-size: 22px;
+    }
+    .text {
+        font-size: 8px;
+    }
+}

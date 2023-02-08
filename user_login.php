@@ -15,14 +15,16 @@
         <div class="form-control">
             <input id="username" type="text" class="username" placeholder="Username">
             <small class="notShow">Username is required</small>
+            <!-- <script>showSucceed(document.querySelector("#username"))</script> -->
             <span></span>
         </div>
         <div class="form-control">
-            <input id="password" type="password" class="password" placeholder="Password">
+            <input id="password" type="password" class="Password" placeholder="Password">
             <small class="notShow">Password is required</small>
+            <!-- <script>showSucceed(document.querySelector("#password"))</script> -->
             <span></span>
         </div>
-        <button type="submit" class="btn-submit">Sign in</button>
+        <button type="submit" class="btn-submit">Sign in</button>   
         <div class="signup-link">
             Or Sign in as <a href="../Admin/admin_login.php"#>Admin</a>
         </div>

@@ -15,31 +15,37 @@
         <div class="form-control">
             <input id="username" type="text" class="username" placeholder="Username">
             <small class="notShow">Username is required</small>
+            <!-- <script>showSucceed(document.querySelector("#username"))</script> -->
             <span></span>
         </div>
         <div class="form-control">
             <input id="email" type="email" class="email" placeholder="Email">
-            <small>Email is required</small>
+            <small class="notShow">Email is required</small>
+            <!-- <script>showSucceed(document.querySelector("#email"))</script> -->
             <span></span>
         </div>
         <div class="form-control">
             <input id="password" type="password" class="Password" placeholder="Password">
-            <small>Password is required</small>
+            <small class="notShow">Password is required</small>
+            <!-- <script>showSucceed(document.querySelector("#password"))</script> -->
             <span></span>
         </div>
         <div class="form-control">
             <input id="confirm-password" type="password" class="confirm-password" placeholder="Confirm password">
-            <small>Confirm password is required</small>
+            <small class="notShow">Confirm password is required</small>
+            <!-- <script>showSucceed(document.querySelector("#confirm-password"))</script> -->
             <span></span>
         </div>
         <div class="form-control">
             <input id="tele" type="text" class="phoneNumber" placeholder="Telephone">
-            <small>Telephone is required</small>
+            <small class="notShow">Telephone is required</small>
+            <!-- <script>showSucceed(document.querySelector("#phoneNumber"))</script> -->
             <span></span>
         </div>
         <div class="form-control">
             <input id="addr" type="text" class="addr" placeholder="Address">
-            <small>Address is required</small>
+            <small class="notShow">Address is required</small>
+            <!-- <script>showSucceed(document.querySelector("#addr"))</script> -->
             <span></span>
         </div>
         <button type="submit" class="btn-submit">Register</button>

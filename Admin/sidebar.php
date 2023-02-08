@@ -10,7 +10,7 @@
         <div class = "sidebar_item"><a href=""><i class="fa-solid fa-book"></i>  Book</a></div>
         <div class = "sidebar_item"><a href=""><i class="fa-solid fa-users"></i> User</a></div>
         <div class = "sidebar_item"><a href=""><i class="fa-solid fa-triangle-exclamation"></i>  User Requests</a></div>
-        <div class = "sidebar_item"><a href=""><i class="fa-solid fa-right-from-bracket"></i>  Log out</a></div>
+        <div class = "sidebar_item"><a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i>  Log out</a></div>
      </div>
 
 </body>

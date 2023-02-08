@@ -8,6 +8,11 @@
     <link href="Css/header.css" rel="stylesheet">
     <title>Library Management</title>
 </head>
+<?php
+    session_start();
+    $username = $_SESSION['username'];
+    $password =  $_SESSION['password'];
+?>
 <body>
     <div class="hMother_div">
         <div class= "float_div" id="hTitle">
@@ -19,7 +24,7 @@
                 <ul class = "drop_content">
                     <li><a href="profile.php">Profile</a></li>
                     <li><a href="setting.php">Setting</a></li>
-                    <li><a href= "">Sign out</a></li>
+                    <li><a href= "logout.php">Sign out</a></li>
                 </ul>
             </div>
         </div>

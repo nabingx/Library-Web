@@ -3,6 +3,8 @@
     include 'sidebar.php';
 ?>
 <html>
+    <?php
+    ?>
 <head>
     <link rel="stylesheet" href="Css/setting.css">
 </head>

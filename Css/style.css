@@ -1,13 +1,13 @@
 html{
     width: 100%;
     min-width: 600px;
-    height: 680px;
-    background-image: url('../src/img/bg.jpg');
+    min-height: 700px;
+    height: 100%;
+    background-image: url('../src/img/bg.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     overflow-x: hidden;
-    overflow-y: hidden;
 }
 body{
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -20,11 +20,11 @@ body{
 .head{
     height: 90px;
     width: 90%;
-    background-color: rgb(130, 172, 235);
+    background-color:rgb(222,222,222);
     border-radius: 5px;
 }   
-.head h1{
-    text-align: center;
+.head img{
+    height: 90px;
     color: black;
 }
 .content{
@@ -33,19 +33,18 @@ body{
     /* background-color:  rgb(130, 172, 235); */
     border-radius: 5px;
 }
-.left_content{
+.upper_content{
     float: left;
     border-radius: 5px;
-    width: 65%;
+    width: 100%;
     height: 100%;
-    background-color:  rgb(130, 172, 235);
-    /* background-color: black; */
+    background-color: rgb(48, 32, 32);
 }   
-.left_content strong{
-    
+.upper_content strong{
+    display: block;
+    padding-top: 2%;
     text-align: center;
-    padding-left: 5%;
-    font-size: 40px;
+    width: 100%;
     color: azure;
 }
 .right_content{
@@ -53,6 +52,16 @@ body{
     border-radius: 5px;
     
     width: 35%;
+    height: 100%;
+}
+.left_div{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.right_div{
+    float: left;
+    width: 50%;
     height: 100%;
 }
 .admin_content{
@@ -65,10 +74,10 @@ body{
 }
 .admin_login{
     height: 30px;
-    display: block;
-    position: absolute;
-    top: 36%;
-    left: 65%;
+    /* display: block; */
+    position: relative;
+    top: 20%;
+    left: 20%;
     font-size: 18px;
     background-color: rgb(31,31,31);
     border-radius: 5px;
@@ -84,9 +93,15 @@ body{
 
 .user_login, .user_register{
     height: 30px;
-    display: block;
-    position: absolute;
-    top: 80%;
+    /* display: block; */
+    position: relative;
+    width: 80%;
+    left: 15%;
+}
+
+.user_login_button, .user_register_button{
+    height: 30px;
+    position: relative;
     font-size: 18px;
     background-color: rgb(189,203,204);
     border-radius: 5px;
@@ -95,14 +110,14 @@ body{
     border-color: rgb(31,31,31);
     color:  rgb(31,31,31);
 }
-.user_login:hover, .user_register:hover{
+.user_login_button:hover, .user_register_button:hover{
     border-color: rgb(60, 165, 209);
 }
-.user_login{
-    left: 65%;
+.user_login_button{
+    top: 10%;
 }
-.user_register{
-    left: 85%;
+.user_register_button{
+    top: 50%;
 }
 .user_content{
     width: 100%;
@@ -114,9 +129,9 @@ body{
     /* background-color: white; */
 }
 .user_content label{
-    position: absolute;
-    top: 65%;
-    left: 73%;
+    position: relative;
+    top: 50%;
+    left: 10%;
     font-size: 35px;
 
 }
@@ -139,21 +154,21 @@ hr{
 }
 
 .mySlides {
-    padding-left: 7.5%;
-    width: 85%;
+    padding-left: 15%;
+    height: 100%;
+    width: 70%;
     display: none;
 }
 
 .mySlides img{
-    padding-top: 5%;
+    padding-top: 3%;
+    width: 100%;
 }
   /* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: 1%;
-    /* margin-top: -22px; */
+    position: relative;
+    /* top: 10%; */
     padding: 16px;
     color: white;
     font-weight: bold;
@@ -165,7 +180,7 @@ hr{
   
   /* Position the "next button" to the right */
 .next {
-    right: 36.5%;
+    left: 85%;
     border-radius: 3px 0 0 3px;
 }
   
@@ -213,7 +228,7 @@ hr{
 }
 
 @media screen and (min-width: 1200px){
-    .left_content strong{
+    .upper_content strong{
         font-size: 40px;
     }
     .text {
@@ -222,7 +237,7 @@ hr{
 }
 
 @media screen and (min-width: 901px) and (max-width: 1200px){
-    .left_content strong{
+    .upper_content strong{
         font-size: 35px;
     }
     .text {
@@ -231,7 +246,7 @@ hr{
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px){
-    .left_content strong{
+    .upper_content strong{
         font-size: 26px;
     }
     .text {
@@ -239,7 +254,7 @@ hr{
     }
 }
 @media screen and (max-width: 600px){
-    .left_content strong{
+    .upper_content strong{
         font-size: 22px;
     }
     .text {

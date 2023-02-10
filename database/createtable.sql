@@ -12,7 +12,6 @@ CREATE TABLE IF NOT EXISTS public."Library"
     "Author" character varying(200) NOT NULL,
     "Public_Date" date NOT NULL,
     "Public_Company" character varying(200) NOT NULL,
-    "Book_Status" boolean NOT NULL,
     PRIMARY KEY ("Book_ID")
 );
 
@@ -32,9 +31,10 @@ CREATE TABLE IF NOT EXISTS public."User"
     "Password" character varying(20) NOT NULL,
     "PhoneNum" character varying(20) NOT NULL,
     "UserAddr" character varying(200) NOT NULL,
-    "DoB" date NOT NULL,
+    "Name" character varying(200) NOT NULL,
     PRIMARY KEY ("User_ID"),
-    CONSTRAINT email_unique UNIQUE ("Email")
+    CONSTRAINT email_unique UNIQUE ("Email"),
+    CONSTRAINT name_unique UNIQUE ("Name")
 );
 
 CREATE TABLE IF NOT EXISTS public."Admin"
@@ -52,7 +52,6 @@ CREATE TABLE IF NOT EXISTS public."Contact_Lib"
     "LibraryName" character varying(200) NOT NULL,
     "LibraryPhoneNum" character varying(20) NOT NULL,
     "LibraryEmail" character varying(200) NOT NULL,
-    "LibraryAddress" character varying(200) NOT NULL,
     PRIMARY KEY ("LibID")
 );
 

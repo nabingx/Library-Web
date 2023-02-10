@@ -2,6 +2,13 @@
 -- Please log an issue at https://redmine.postgresql.org/projects/pgadmin4/issues/new if you find any bugs, including reproduction steps.
 BEGIN;
 
+insert into "Library"("Book_ID", "BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Book_Status")
+values
+(2, 'Na và những người bạn 2', 'Tiểu thuyết', 3, 'Mousseir Na', '2021-12-18', 'Million Na', 'false'),
+(3, 'Mistake', 'Truyện trinh thám', 1, 'Mrs.Na', '2022-12-20', 'Million Na', 'true'),
+(4, 'Doraemon', 'Manga', 10, 'Fujio F.Fujiko', '2020-12-10', 'Million Na', 'false'),
+(5, 'Nobita', 'Manga', 15, 'Fujio F.Fujiko', '2020-8-21', 'Million Na', 'true');
+
 
 CREATE TABLE IF NOT EXISTS public."Library"
 (

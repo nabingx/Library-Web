@@ -13,7 +13,7 @@
 ?>
 <body>
     <div class="container">
-        <form id="myform" action= "" method = "POST"> 
+        <form id="myform" action= "admin_login.php" method = "POST"> 
             <?php //echo $_SERVER['PHP_SELF'] ?>
             <h1>Admin Login</h1>
         <div class="form-control">
@@ -112,6 +112,9 @@
     if($check == true){
        $_SESSION['username'] = $username;
        $_SESSION['password'] = $password;
+
+    //    $row = {"tt", "tt"}  = mysql_fetch_array($cmd)
+    //    $_SESSION['categories'] = $row;
        header("location:index.php");
     }
 ?>

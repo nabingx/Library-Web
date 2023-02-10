@@ -1,11 +1,11 @@
 .sMother_div{
     float: left;
-    width: 200px;
+    width: 16vw;
     height: 100%;
     background-color:  rgb(38, 32, 42);
 }
 .sidebar_item{
-    width: 200px;
+    width: 16vw;
     height: 70px;
     cursor: pointer;
 }
@@ -19,7 +19,7 @@
     text-decoration: none;
     color: azure;
     height: 70px;
-    width: 200px;
+    width: 16vw;
 }
 .sidebar_item a i{
     width: 20px;

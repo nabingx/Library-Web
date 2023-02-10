@@ -9,6 +9,10 @@ values
 (4, 'Doraemon', 'Manga', 10, 'Fujio F.Fujiko', '2020-12-10', 'Million Na', 'false'),
 (5, 'Nobita', 'Manga', 15, 'Fujio F.Fujiko', '2020-8-21', 'Million Na', 'true');
 
+SELECT DISTINCT "Author" FROM "Library";
+SELECT DISTINCT "Category" FROM "Library";
+SELECT * FROM "Library" WHERE "Book_ID" = 1;
+
 
 CREATE TABLE IF NOT EXISTS public."Library"
 (

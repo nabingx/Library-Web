@@ -155,10 +155,20 @@ header:hover{
     background-color: #333;
 }
 /* -------------------- category -----------------------------*/
+.container {
+    display: flex;
+}
 .row
  {
     display: flex;
     padding-top: 150px;
+    padding-left: 20px;
+    text-align: center;
+    align-items: center;
+}
+.category-row
+ {
+    display: flex;
     padding-left: 20px;
     text-align: center;
     align-items: center;
@@ -185,9 +195,17 @@ header:hover{
 {
     width: 20%;
 }
-.cartegory-left
+.cartegory-right
 {
     width: 80%;
+    flex-direction: column;
+}
+.cartegory-right-top
+{
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    
 }
 .cartegory-right-top-item:first-child
 {
@@ -213,7 +231,7 @@ header:hover{
 }
 .cartegory-right-top-item select
 {
-    width: 70%;
+    width: 200px;
     padding: 10px 15px;
     display: flex;
     justify-content: space-between;
@@ -228,9 +246,10 @@ header:hover{
 }
 .cartegory-right-content-item
 {
-    width: calc(25%-12px);
+    width: calc(17% - 15px);
     text-align: center;
     padding: 12px 0;
+    height: 100px;
 }
 .cartegory-right-content-item h1
 {
@@ -238,7 +257,50 @@ header:hover{
     font-family: var(--main-text-font);
     margin-top: 6px;
     color: #333;
-
+}
+.cartegory-right-content-item img
+{
+    width: 100%;
+}
+.cartegory-right-bottom 
+{
+    justify-content: space-between;
+    margin: 150px 0 20px ;
+    width: 100%;
+}
+.cartegory-right-bottom p
+{  
+    font-family: var(--main-text-font);
+    font-size: 11px;
+    
+}
+.cartegory-left ul li
+{
+    padding: 12px 0;
+}
+.cartegory-left ul li>a
+{
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: var(--main-text-font);
+}
+.cartegory-left ul li ul li
+{
+    padding-left: 10px;
+}
+.cartegory-left-li ul
+{
+    display: none;
+}
+.cartegory-left-li.block ul 
+{
+    display: block;
+}
+.cartegory-left ul li ul li a
+{
+    color: #333;
+    font-size: 12px;
 }
 /* ------------------------app------------------------------- */
 .app-container{
@@ -313,4 +375,45 @@ footer{
 .footer-bottom{
     margin: 20px 0;
     text-align: center;
+}
+/* ---------------------PRODUCT ----------------*/
+.product
+{
+    padding: 100px 0;
+}
+.product-top
+{
+    margin-bottom: 30px;
+}
+.product-top p
+{
+    font-family: var(--main-text-font);
+    margin: 0 12px;
+    font-size: 12px;
+}
+.product-content-left
+{
+    width: 50%;
+}
+.product-content-left-big-img
+{
+    width: 80%;
+    padding-right: 20px;
+}
+.product-content-left-big-img img
+{
+    width: 100%;
+}
+.product-content-left-small-img
+{
+    width: 20%;
+}
+.product-content-left-small-img img
+{
+    width: 100%;
+}
+.product-content-right
+{
+    width: 50%;
+    padding-left: 20px;
 }

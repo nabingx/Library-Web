@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- cmm / -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/1147679ae7.js"crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/style.css">
+        <title>Library Bách Khoa</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="logo">
+                <img src="/images/logo.png">
+            </div>
+<!---------------------------------- menu --------------------------------->
+            <div class="menu">
+                <li><a href="">SACH HAY</a>
+                    <ul class="sub-menu">
+                        <li><a href="">SACH VÀNG</a></li>
+                        <li><a href="">SACH CA NHAC</a></li>
+                        <li><a href="">SACH TÂM LÍ</a></li>
+                        <li><a href="">SACH VIỄN TƯỞNG</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="">NGON TINH</a></li>
+                <li><a href="">SACH GIAO KHOA</a></li>
+                <li><a href="">SACH VIEN TUONG</a></li>
+                <li><a href="">SACH NGHIEN CUU</a></li>
+            </div>
+            <div class="others">
+                <li><input placeholder="Tìm kiếm" type="text"><i class="fas fa-search"></i></li>
+                <li><a class ="fas fa-heart" href=""></a></li>
+                <li><a class ="fas fa-user" href=""></a></li>
+                <li><a class ="fas fa-shopping-bag" href=""></a></li>
+                <li><a class ="fas fa-bars" href=""></a></li>
+
+            </div>
+        </header>
+<!---------------------- Product ---------------->
+<section class="product">
+    <div class="container">
+        <div class="product-top row">
+            <p>Trang chu</p><span>&#10148;</span><p>Tac gia A</p><span>&#10148;</span><p>A</p>
+        </div>
+        <div class="product-content row">
+            <div class="product-content-left row">
+                <div class="product-content-left-big-img">
+                    <img src="/images/s1.png"alt="">
+
+                </div>
+                <div class="product-content-left-small-img row">
+                    <img src="/images/ms1.png"alt="">
+                    <img src="/images/ms1.png"alt="">
+                    <img src="/images/ms1.png"alt="">
+                    <img src="/images/ms1.png"alt="">
+                </div>
+                <!-- test -->
+                <section class = "app-container">
+                    <hr width="100%"
+                    color="black"
+                    align="right"
+                    size="2px">
+                <p>Thong tin sach:</p>
+                <p> Con chut gi de nho: La mot trong nhung cuon sach noi tieng cua Nguyen Nhat Anh, noi ve nhung gi? </p>
+                <!-- test -->
+
+            </div>
+            <div class="product-content-right">
+                
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--------------------- app.container------------>
+        <section class = "app-container">
+            <hr width="100%"
+            color="black"
+            align="right"
+            size="2px">
+            <p>Tải ứng dụng Library Book</p>
+            <div class="app-google">
+                <img src="/images/appstore.png">
+                <img src="/images/googleplay.png">
+            </div>
+            <p>Nhận bản tin Library Book</p>
+            <input type="text" placeholder="Nhập email của bạn">
+        </section>
+<!----------------------------- footer ----------------------------------->
+<div class = "footer-top">
+<li><a href=""><img src = "/images/chatluong.png"alt=""></a></li>
+<li><a href=""></a>Liên hệ</li>
+<li><a href=""></a>Thông tin</li>
+<li><a href=""></a>Giới thiệu</li>
+<li>
+    <a href="" class="fab fa-facebook-f"></a>
+    <a href="" class="fab fa-twitter"></a>
+    <a href="" class="fab fa-youtube"></a>
+    <a href="" class="fab fa-instagram"></a>
+
+</li>
+</div>
+<div class="footer-center">
+<p>
+    Thư viện sách Bách Khoa<br>
+    Địa chỉ: 108 P. Lê Thanh Nghị, Bách Khoa, Hai Bà Trưng, Hà Nội <br>
+    Hotline liên hệ : <b>0968 686 868</b>
+</p>
+</div>
+
+<div class="footer-bottom">
+© All rights reserved
+</div>
+
+</body>
+<!------------------------------ Java Script ------------------------------>
+<script>
+    const header = document.querySelector("header")
+    window.addEventListener("scroll",function()
+    {
+        x = window.pageYOffset
+        if(x>0)
+        {
+            header.classList.add("sticky")
+        }
+        else{
+            header.classList.remove("sticky")
+        }
+    })
+</script>
+<script src="/js/script.js"></script>
+</html>
+    </body>
+</html>

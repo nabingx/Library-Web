@@ -24,13 +24,13 @@
             <h1>Dashboard</h1>
         </div>
         <div class="box">
-            <a href="">
+            <a href="book.php">
             <p><?php echo $book_count; ?></<p>
             <p>Total books</p> 
             </a>
         </div>
         <div class="box">
-            <a href="">
+            <a href="author.php">
             <p><?php echo $author_count; ?></<p>
             <p>Total authors</p> 
             </a>

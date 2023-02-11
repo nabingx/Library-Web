@@ -9,34 +9,28 @@
     border-style:solid;
     border-color: rgb(69, 169, 169);
     float: left;
-    width: 250px;
-    height: 120px;
+    width: 17vw;
+    height: 16vh;
     background-color: rgb(69, 169, 169);
     border-radius: 5px;
     margin-left: 20px;
     margin-top: 20px;
 }
-.box a{
-    text-decoration: none;
-    display:inline-block;
-    width: 100%;
-    height: 100%;
-}
 .box p{
     font-size: 20px;
     text-align: center;
     color: azure;
+    text-decoration: underline;
+    text-decoration-color: rgb(69, 169, 169);
 }
-
 .box:hover p{
+    
     color:  rgb(69, 169, 169);
 }
-
 .box:hover{
     cursor: pointer;
     background-color: white;
 }
-
 @media screen and (min-width: 1501px){
     div.dMother_div{
         width: 1200px;
@@ -49,7 +43,6 @@
     }
     
 }
-
 @media screen and (max-width: 1200px) and (min-width: 851px){
     div.dMother_div{
         width: 600px;

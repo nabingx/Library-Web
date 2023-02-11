@@ -2,47 +2,51 @@
     padding: 0%;
     margin: 0%;
     float: left;
-    padding-left: 10px;
+    padding-left: 1vw;
 }
 
 .taskbar{
-    width: 100%;
-    height: 35px;
+    width: 70vw;
+    height: 5vh;
     border-style:solid;
     border-color: rgb(240, 240, 240);
     background-color:  rgb(240, 240, 240);
     border-radius: 5px;
-    padding-top: 10px;
-    padding-left: 5px;
+    padding-top: 2vh;
+    padding-left: 1vw;
 }
 .table{
-    width: 100%;
-    height: 500px;
+    width: 68vw;
+    height: 66vh;
     border-style:solid;
     border-color: rgb(240, 240, 240);
     background-color: white;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 3vh;
+}
+.myForm{
+    height: 45vh;
 }
 .myForm label{
     display: block;
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-left: 3vw;
+    margin-top: 4vh;
 }
 .half_lable{
-    width: 42%;
+    width: 25vw;
     float: left;
+    width: 29vw;
 }
 .myForm input{
     display: block;
-    margin-left: 25px;
-    margin-top: 10px;
+    margin-left: 3vw;
+    margin-top: 2vh;
     border-style:solid;
     border-color: rgb(240, 240, 240);
     background-color: white;
     border-radius: 5px;
-    width: 90%;
-    height: 25px;
+    width: 60vw;
+    height: 5vh;
 }
 .myForm small{
     /* display: block; */
@@ -63,12 +67,12 @@
 .half_input{
     float: left;
     margin: 0%;
-    width: 40% !important;
+    width: 35% !important;
 }
 .myForm button{
     cursor: pointer;
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 3vw;
     margin-right: 200px;
     width: 50px;
     height: 30px;

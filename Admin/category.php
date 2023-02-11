@@ -1,3 +1,4 @@
+<!-- add session please -->
 <?php
     include 'header.php';
     include 'sidebar.php';
@@ -5,13 +6,14 @@
 <html>
 <head>
     <link rel="stylesheet" href="Css/category.css">
+    <link rel="stylesheet" href="Css/category.css">
 </head>
 <body>
     <div class = "cateMother_div">
         <div>
             <h1>Profile</h1>
         </div>
-        <div class="taskbar"><a href="index.php">Dashboard</a>&nbsp;/&nbsp;<a href="setting.php">Category</a></div>
+        <div class="taskbar"><a href="index.php">Dashboard</a>&nbsp;/&nbsp;<a href="category.php">Category</a></div>
         <div class= "table">
             <div class= "tableLable"><i class="fa-solid fa-user-pen"></i>Category Setting</div>
             <form action="" method="get" class="myForm">

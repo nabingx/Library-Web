@@ -25,7 +25,7 @@
         <div class="taskbar"><a href="index.php">Dashboard</a>&nbsp;/&nbsp;<a href="setting.php">Setting</a></div>
         <div class= "table">
             <div class= "tableLable"><i class="fa-solid fa-user-pen"></i>Library Setting</div>
-            <form action="" method="Get" class="myForm">
+            <form action="setting.php" method="Get" class="myForm">
                 <label>Library Name</label>
                 <input type="text" name="LibName" id = "LibName" placeholder="<?php echo $libName?>" value ="<?php echo isset($_GET['LibName']) ? $_GET['LibName']: '';?>"></input>
                 <small class="noShow" id = "NameErr">Name is required</small>
@@ -121,7 +121,7 @@
     }
     if(isset($_GET['submit'])){
         if(check($libName, $libAddr, $libPhoneNum, $libEmail) == true){
-            $pg_cmd = "UPDATE \"Contact_Lib\" SET \"LibraryName\" = $1, \"LibraryPhoneNum\" = $2, \"LibraryEmail\" = $3";
+            $pg_cmd = "UPDATE public.\"Contact_Lib\" SET \"LibraryName\" = $1, \"LibraryPhoneNum\" = $2, \"LibraryEmail\" = $3";
             pg_prepare($connect, "", $pg_cmd);
             pg_query_params($connect, $pg_cmd, array($libName, $libPhoneNum, $libEmail));
             echo"

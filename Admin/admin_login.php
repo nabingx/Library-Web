@@ -30,7 +30,7 @@
         </div>
         <button type="submit" name="submit" class="btn-submit">Sign in</button>
         <div class="signup-link">
-            Back to <a href="../index.html"#>Library Online</a>
+            Back to <a href="../HomePage/index.html">Library Online</a>
         </div>
         </form>
     </div>

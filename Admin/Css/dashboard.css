@@ -16,19 +16,27 @@
     margin-left: 20px;
     margin-top: 20px;
 }
+.box a{
+    text-decoration: none;
+    display:inline-block;
+    width: 100%;
+    height: 100%;
+}
 .box p{
     font-size: 20px;
     text-align: center;
     color: azure;
 }
+
 .box:hover p{
-    
     color:  rgb(69, 169, 169);
 }
+
 .box:hover{
     cursor: pointer;
     background-color: white;
 }
+
 @media screen and (min-width: 1501px){
     div.dMother_div{
         width: 1200px;
@@ -41,6 +49,7 @@
     }
     
 }
+
 @media screen and (max-width: 1200px) and (min-width: 851px){
     div.dMother_div{
         width: 600px;

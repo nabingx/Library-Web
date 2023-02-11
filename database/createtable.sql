@@ -12,6 +12,8 @@ CREATE TABLE IF NOT EXISTS public."Library"
     "Author" character varying(200) NOT NULL,
     "Public_Date" date NOT NULL,
     "Public_Company" character varying(200) NOT NULL,
+    "Overview" character varying(200),
+    "Book_Status" boolean NOT NULL,
     PRIMARY KEY ("Book_ID")
 );
 
@@ -89,6 +91,34 @@ CREATE TABLE IF NOT EXISTS public."ReqHistory"
     "Content" character varying NOT NULL,
     PRIMARY KEY ("Request_ID")
 );
+
+CREATE TABLE IF NOT EXISTS public."Category"
+(
+    "Category_Name" character varying(200) NOT NULL,
+    PRIMARY KEY ("Category_Name")
+);
+
+CREATE TABLE IF NOT EXISTS public."Author"
+(
+    "Author_Name" character varying(200) NOT NULL,
+    PRIMARY KEY ("Author_Name")
+);
+
+ALTER TABLE IF EXISTS public."Library"
+    ADD CONSTRAINT author_fk FOREIGN KEY ("Category")
+    REFERENCES public."Category" ("Category_Name") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS public."Library"
+    ADD CONSTRAINT cate_fk FOREIGN KEY ("Author")
+    REFERENCES public."Author" ("Author_Name") MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
 
 ALTER TABLE IF EXISTS public."Book"
     ADD FOREIGN KEY ("Book_ID")

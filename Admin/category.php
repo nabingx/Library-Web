@@ -68,6 +68,9 @@
         cell1.innerHTML = input.value;
         cell2.innerHTML = "0";
         cell3.innerHTML = "<td><input type=\"checkbox\" class=\"checkboxInput\" name=\"active\" ><?php $new = @ $_GET['newCate']; array_push($catArrs, $new);?></input></td>";
+        <?php 
+                
+        ?>
     }
 </script>
 

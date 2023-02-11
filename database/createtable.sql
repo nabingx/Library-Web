@@ -62,6 +62,7 @@ CREATE TABLE IF NOT EXISTS public."Request"
     "Request_ID" serial NOT NULL,
     "User_ID" serial NOT NULL,
     "Content" character varying(1000) NOT NULL,
+    status character varying(100) NOT NULL,
     PRIMARY KEY ("Request_ID")
 );
 
@@ -82,14 +83,6 @@ CREATE TABLE IF NOT EXISTS public."Order"
     "TotalTime" integer NOT NULL,
     "Price" money NOT NULL,
     PRIMARY KEY ("Order_ID")
-);
-
-CREATE TABLE IF NOT EXISTS public."ReqHistory"
-(
-    "Request_ID" serial NOT NULL,
-    "User_ID" serial NOT NULL,
-    "Content" character varying NOT NULL,
-    PRIMARY KEY ("Request_ID")
 );
 
 CREATE TABLE IF NOT EXISTS public."Category"
@@ -163,14 +156,6 @@ ALTER TABLE IF EXISTS public."Order"
 ALTER TABLE IF EXISTS public."Order"
     ADD CONSTRAINT book_id FOREIGN KEY ("Book_ID")
     REFERENCES public."Library" ("Book_ID") MATCH SIMPLE
-    ON UPDATE NO ACTION
-    ON DELETE NO ACTION
-    NOT VALID;
-
-
-ALTER TABLE IF EXISTS public."ReqHistory"
-    ADD CONSTRAINT user_fk FOREIGN KEY ("User_ID")
-    REFERENCES public."User" ("User_ID") MATCH SIMPLE
     ON UPDATE NO ACTION
     ON DELETE NO ACTION
     NOT VALID;

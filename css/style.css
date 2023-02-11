@@ -73,6 +73,17 @@ header:hover{
     display: block;
     line-height: 20px;
 }
+.others #suggestions{
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* background-color: white; */
+    height: 60px;
+    width: 180px;
+    margin-top: -40px;
+}
+.others #suggestions :hover{
+    background-color: white;
+}
 .others {
     display: flex;
     flex: 1;

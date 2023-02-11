@@ -5,14 +5,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/1147679ae7.js"crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="../css/style.css">
         <title>Library Bách Khoa</title>
     </head>
 
     <body>
         <header>
             <div class="logo">
-                <img src="/images/logo.png">
+                <img src="../images/logo.png">
             </div>
 <!---------------------------------- menu --------------------------------->
             <div class="menu">
@@ -31,7 +31,42 @@
                 <li><a href="">SACH NGHIEN CUU</a></li>
             </div>
             <div class="others">
-                <li><input placeholder="Tìm kiếm" type="text"><i class="fas fa-search"></i></li>
+                <li><input placeholder="Tìm kiếm" id="input-search" type="text"><i class="fas fa-search"></i></li>
+                <div id="error"></div>
+                <ul id="suggestions"></ul>
+                <script>
+                    const inp = document.getElementById('input-search');
+                    const listBox = document.getElementById('suggestions');
+                    const errorBox = document.getElementById('suggestions');
+
+                    function setSuggestions(s) {
+                        listBox.innerHTML = s.map(si => `<li>${si}</li>`).join('');
+                    }
+
+                    inp.addEventListener('input', () => {
+                        const value = inp.value.trim();
+                        if (value == '') return setSuggestions([]);
+
+                        const xhr = new XMLHttpRequest();
+                        xhr.onload = () => {
+                            const ret = JSON.parse(xhr.response);
+                            console.log(ret)
+                            setSuggestions(ret.suggestions);
+                        }
+                        xhr.onerror = (err) => {
+                            errorBox.innerText = err;
+                        }
+                        xhr.open('GET', 'get-searchs.json.php?value=' + encodeURIComponent(value), true);
+                        xhr.send();
+                    })
+
+                    listBox.addEventListener('click', event => {
+                        const value = event.target.innerText;
+                        inp.value = value;
+                    })
+
+                </script>
+
                 <li><a class ="fas fa-heart" href=""></a></li>
                 <li><a class ="fas fa-user" href=""></a></li>
                 <li><a class ="fas fa-shopping-bag" href=""></a></li>
@@ -42,11 +77,11 @@
 <!----------------------------- Slider -------------------------------->
         <section id="Slider">
             <div class="aspect-ratio-169">
-                <img src="/images/1.jpg">
-                <img src="/images/2.jpg">
-                <img src="/images/3.jpg">
-                <img src="/images/4.jpg">
-                <img src="/images/5.jpg">
+                <img src="../images/1.jpg">
+                <img src="../images/2.jpg">
+                <img src="../images/3.jpg">
+                <img src="../images/4.jpg">
+                <img src="../images/5.jpg">
             </div>
         <div class="dot-container">
             <div class="dot active"></div>
@@ -61,8 +96,8 @@
             <section class = "app-container">
                 <p>Tải ứng dụng Library Book</p>
                 <div class="app-google">
-                    <img src="/images/appstore.png">
-                    <img src="/images/googleplay.png">
+                    <img src="../images/appstore.png">
+                    <img src="../images/googleplay.png">
                 </div>
                 <p>Nhận bản tin Library Book</p>
                 <input type="text" placeholder="Nhập email của bạn">
@@ -70,7 +105,7 @@
         </section>
 <!----------------------------- footer ----------------------------------->
 <div class = "footer-top">
-    <li><a href=""><img src = "/images/chatluong.png"alt=""></a></li>
+    <li><a href=""><img src = "../images/chatluong.png"alt=""></a></li>
     <li><a href=""></a>Liên hệ</li>
     <li><a href=""></a>Thông tin</li>
     <li><a href=""></a>Giới thiệu</li>

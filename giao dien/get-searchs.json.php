@@ -1,7 +1,7 @@
 <?php
 
 $connect = pg_connect("host=localhost port=5432 dbname=OnlineLibrary user=postgres password =12345678");
-$pg_cmd = "SELECT \"BookName\" FROM \"Library\"";
+$pg_cmd = "SELECT * FROM \"Library\"";
 $pg_execute = pg_query($connect, $pg_cmd);
 
 
@@ -138,7 +138,9 @@ $bad_words = [
     'loz',
     'dit',
     'ditme',
-    'sna'
+    'sna',
+    'ngu vl',
+    'ngu ia'
 ];
 
 
@@ -152,11 +154,11 @@ else {
     
     foreach ($arr as $ai) {
         $s = substr($ai, 0, strlen($value));
-        if ($s == $value) $suggestions[] = $ai;
+        if (strtolower($s) == strtolower($value)) $suggestions[] = $ai;
     }
 
     foreach ($bad_words as $bad_wordi) {
-        if ($value == $bad_wordi) {
+        if (strtolower($value) == strtolower($bad_wordi)) {
             unset($suggestions);
             $suggestions[] = 'BAD WORD!';
         }
@@ -167,6 +169,5 @@ $ret = new stdClass();
 $ret->suggestions = $suggestions;
 
 print(json_encode($ret));
-
 
 ?>

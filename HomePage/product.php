@@ -101,12 +101,41 @@
         <form action="" method="get">
             <div class="UserComment" id = "UserComment">
                 <p class="user_name">You</p>
-                <input type="text" name="userInput" placeholder="Đánh giá của bạn">
+                <input type="text" name="userInput" id="input-comment" placeholder="Đánh giá của bạn">
                 <?php 
                     if(isset($_GET['userInput'])) $comment = $_GET['userInput'];
                 ?>
                 <button type="submit" name = "submit">Gửi</button>
             </div>
+            <div id="error1"></div>
+            <ul id="suggestions1"></ul>
+            <script>
+                const inp1 = document.getElementById('input-comment');
+                const listBox1 = document.getElementById('suggestions1');
+                const errorBox1 = document.getElementById('suggestions1');
+                function setSuggestions1(s) {
+                    listBox1.innerHTML = s.map(si => `<li>${si}</li>`).join('');
+                }
+                inp1.addEventListener('input', () => {
+                    const value = inp1.value.trim();
+                    if (value == '') return setSuggestions1([]);
+                    const xhr1 = new XMLHttpRequest();
+                    xhr1.onload = () => {
+                        const ret1 = JSON.parse(xhr1.response);
+                        console.log(ret1);
+                        setSuggestions1(ret1.suggestions);
+                    }
+                    xhr1.onerror = (err) => {
+                        errorBox1.innerText = err;
+                    }
+                    xhr1.open('GET', '../Controller/get-comments.json.php?value=' + encodeURIComponent(value), true);
+                    xhr1.send();
+                })
+                listBox1.addEventListener('click', event => {
+                    const value = event.target.innerText;
+                    inp1.value = value;
+                })
+            </script>
             <div class="sign_in" id = "sign-in">
                 <p><a href="../user_login.php">Đăng nhập</  a> để bình luận sản phẩm!</p>
             </div>

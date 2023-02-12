@@ -69,6 +69,7 @@
     border-radius: 5px;
     border-style: ridge;
     border-color: antiquewhite;
+    border-width: 0;
 }
 .comment h2{
     text-align: center;

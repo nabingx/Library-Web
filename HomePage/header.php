@@ -33,7 +33,7 @@
                 <li>
                     <form action="product.php" method="get">
                         <input placeholder="Tìm kiếm" id="input-search" name = "bookname" type="text"><i><a class="fas fa-search" href="product.php?bookname=<?php $book_name = @ $_GET['search']; echo $book_name;?>"></a></i></input>
-                        <input style="border-width:0;" id="submit" type="submit" value=""></input>
+                        <input style="border-width:0; width:0px; float:left" id="submit" type="submit" value=""></input>
                     </form>
                 </li>
                 <div id="error"></div>
@@ -43,7 +43,7 @@
                     const listBox = document.getElementById('suggestions');
                     const errorBox = document.getElementById('suggestions');
                     function setSuggestions(s) {
-                        listBox.innerHTML = s.map(si => `<li>${si}</li>`).join('');
+                        listBox.innerHTML = s.map(si => `<li>${si}</li><hr>`).join('');
                     }
                     inp.addEventListener('input', () => {
                         const value = inp.value.trim();

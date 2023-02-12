@@ -76,13 +76,16 @@ header:hover{
 .others #suggestions{
     overflow-x: hidden;
     overflow-y: auto;
-    /* background-color: white; */
     height: 60px;
     width: 180px;
     margin-top: -40px;
 }
+.others #suggestions li{
+    font-size: 10px;
+}
 .others #suggestions :hover{
     background-color: white;
+    cursor: pointer;
 }
 .others {
     display: flex;

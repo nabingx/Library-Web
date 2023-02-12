@@ -42,7 +42,9 @@ header:hover{
     padding: 0 12px;
     position: relative; 
 }
-.menu > li:hover .sub-menu {
+/*--------------------------*/
+.menu > li:hover .sub-menu,
+.menu > li:hover .sign-menu {
     visibility: visible;
     top: px;
 }
@@ -53,20 +55,34 @@ header:hover{
     padding: 10px 0 10px 20px;
     visibility :hidden;
     top: 50px;
-    transition: 0.3s;
+    transition: 0.1s;
+    z-index: 1;
+    background: #fff;
+} 
+.sign-menu{
+    position: absolute;
+    width: 150px;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 20px;
+    visibility :hidden;
+    top: 50px;
+    right: -30px;
+    transition: 0.1s;
     z-index: 1;
     background: #fff;
 } 
 
-.sub-menu ul{
+.sub-menu ul,
+.sign-menu ul{
     padding-left: 20px;
 }
 
-.sub-menu > li > a{
+.sub-menu > li > a,
+.sign-menu > li > a{
     font-size: 12px;
     font-weight: normal;
 }
-
+/*------------------------------*/
 .menu > li > a{
     font-size: 12px;
     font-weight: bold;
@@ -545,3 +561,55 @@ footer{
 {
     display: none;
 } */
+/* -------------------------------------profile-------------------------- */
+.signup-page{
+    border: 1px solid #000;
+}
+.profile-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.last
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-row
+{
+    background-color: #FFF5EE;
+
+}
+.col-left-ac
+{
+    font-family: var(--main-text-font);
+    position: relative;
+    border: 1px solid #fff;
+    background-color: #F5F5F5;
+    width: 200px;
+    height: 675px;
+    top: -20px;  
+    left: 100px;
+
+}
+.col-right-ac
+{
+    font-family: var(--main-text-font);
+    position: relative;
+    border: 1px solid #fff;
+    background-color: #F5F5F5;
+    width: 350px;
+    height: 675px;
+    top: -20px;        
+    left: 200px; 
+
+}
+.form-signup
+{
+    text-align: left;
+}
+.title-head
+{
+    background-color: #BF8A49;
+}

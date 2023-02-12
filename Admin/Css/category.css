@@ -6,7 +6,7 @@
 }
 
 .taskbar{
-    width: 100%;
+    width: 66vw;
     height: 35px;
     border-style:solid;
     border-color: rgb(240, 240, 240);
@@ -16,7 +16,7 @@
     padding-left: 5px;
 }
 .table{
-    width: 100%;
+    width: 66vw;
     height: 100vh;
     border-style:solid;
     border-color: rgb(240, 240, 240);
@@ -28,10 +28,10 @@
     display: block;
     margin-left: 30px;
     margin-top: 20px;
-    width: 90%;
+    width: 60vw;
 }
 .half_lable{
-    width: 42%;
+    width: 32vw;
     float: none;
     display: inline !important;
 }
@@ -43,7 +43,7 @@
     border-color: rgb(240, 240, 240);
     background-color: white;
     border-radius: 5px;
-    width: 90%;
+    width: 60vw;
     height: 25px;
 }
 .myForm .checkboxInput{
@@ -80,12 +80,12 @@
 .half_input{
     float: left;
     margin: 0%;
-    width: 40% !important;
+    width: 30vw !important;
 }
 .myForm button{
     cursor: pointer;
     margin-top: 10px;
-    margin-left: 48%;
+    margin-left: 30vw;
     margin-right: 200px;
     width: 50px;
     height: 30px;
@@ -108,7 +108,7 @@
     padding: 0%;
     float: inherit;
     text-align: center;
-    width: 100%;
+    width: 66vw;
     height: 30px;
     background-color: rgb(240, 240, 240);
 }

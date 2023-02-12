@@ -71,8 +71,8 @@
                                         $status = 'disable';
                                     }
                                     echo "<td> " . $status . "</td>";
-                                    echo '<td> <a href="?enable_id='. $Book[$i]['BookName'] .'"> <button class="btn btn-warning" style="width: 100px; font-size: 20px;"> Enable</button></a> </td>';
-                                    echo '<td> <a href="?cancel_id='. $Book[$i]['BookName'] .'"> <button class="btn btn-warning" style="width: 100px; font-size: 20px;"> Disable</button></a> </td>';
+                                    echo '<td> <a href="?enable_id='. $Book[$i]['BookName'] .'"> <button class="btn btn-warning" style="width: 75px; font-size: 16px;"> Enable</button></a> </td>';
+                                    echo '<td> <a href="?cancel_id='. $Book[$i]['BookName'] .'"> <button class="btn btn-warning" style="width: 75px; font-size: 16px;"> Disable</button></a> </td>';
                                     echo "</tr>";
                                 }
                             ?>

@@ -81,7 +81,7 @@
                 <form class = myForm method="post" action="Controller/author_control.php">
                 <label style="margin-top: 50px;">Input Author</label>
                 <input id="name" type="text" name="name" class="name" placeholder="Author Name" >
-                <button type="submit" name="submit" class="btn-submit">Add Author</button>
+                <button type="submit" style="width: 150px; height : 75px ;font-size: 20px;" name="submit" class="btn-submit">Add Author</button>
                 </form>
         </div>
     </div>

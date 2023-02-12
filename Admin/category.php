@@ -71,7 +71,7 @@
                 <form class = myForm method="post" action="Controller/cate_control.php">
                 <label style="margin-top: 50px;">Input Category</label>
                 <input id="name" type="text" name="name" class="name" placeholder="Category Name" >
-                <button type="submit" name="submit" class="btn-submit">Add Category</button>
+                <button type="submit" style="width: 150px; height : 75px ;font-size: 20px;" name="submit" class="btn-submit">Add Category</button>
                 
                 </form>
         </div>

@@ -11,6 +11,10 @@
             <title>Online Library</title>
         </head>
 <?php
+<<<<<<< HEAD
+=======
+    session_start();
+>>>>>>> ngocanh-4
     include "../database/connect.php";
     include "../HomePage/header.php";
 
@@ -18,7 +22,10 @@
     $pg_execute = pg_query($connect, $pg_cmd);
     $row_count = pg_num_rows($pg_execute);
     $per_page_record = 12;
+<<<<<<< HEAD
     $max_page = $row_count / $per_page_record + 1;
+=======
+>>>>>>> ngocanh-4
     
     
     
@@ -59,10 +66,21 @@
     if($start_from < 0){
         $start_from = 0;
     }
+<<<<<<< HEAD
     $pg_cmd = "SELECT * FROM \"Library\" WHERE \"Category\" LIKE '%" . $cate . "%' AND \"BookName\" LIKE '%" .$name . "%' AND \"Author\" LIKE '%". $author ."%' ORDER BY \"". $sort . "\" LIMIT " . $per_page_record . " OFFSET ". $start_from;
     $pg_execute = pg_query($connect, $pg_cmd);
     $row_count = pg_num_rows($pg_execute);
     $max_page = $row_count / $per_page_record + 1;
+=======
+    $pg_cmd = "SELECT * FROM \"Library\" WHERE \"Category\" LIKE '%" . $cate . "%' AND \"BookName\" LIKE '%" .$name . "%' AND \"Author\" LIKE '%". $author ."%' ORDER BY \"". $sort . "\"";
+    $pg_execute = pg_query($connect, $pg_cmd);
+    $row_count = pg_num_rows($pg_execute);
+    $max_page = (int)($row_count / $per_page_record) + 1;   
+
+    $pg_cmd = "SELECT * FROM \"Library\" WHERE \"Category\" LIKE '%" . $cate . "%' AND \"BookName\" LIKE '%" .$name . "%' AND \"Author\" LIKE '%". $author ."%' ORDER BY \"". $sort . "\" LIMIT " . $per_page_record . " OFFSET ". $start_from;
+    $pg_execute = pg_query($connect, $pg_cmd);  
+
+>>>>>>> ngocanh-4
 ?>
 
 <div class="content">
@@ -134,7 +152,11 @@
                         </a>
                         <span style = \"border-style: none\"> ". $page ."</span>
                         <a href=\"category.php?page=";
+<<<<<<< HEAD
                         if($page + 1 > $max_page){
+=======
+                        if($page == $max_page){
+>>>>>>> ngocanh-4
                             echo $page;
                         }else{
                             echo ($page + 1);
@@ -150,9 +172,13 @@
             </p>
         </div>
     </form>
+<<<<<<< HEAD
 </div>
     
     --------------------------- footer --------------------------------- -->
+=======
+</div>  
+>>>>>>> ngocanh-4
     <div style="height:20%; width:100%;float:left;">
     <?php include "../HomePage/footer.php" ?>
     <div>

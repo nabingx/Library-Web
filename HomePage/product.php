@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="/css/product.css">
     <body>
         <?php 
+<<<<<<< HEAD
             include '../HomePage/header.php';
             include '../database/connect.php';
             $id = @ $_GET['book'];
@@ -16,6 +17,25 @@
             $email = @ $_SESSION['email'];
             $comment = @ $_GET['userInput'];
             $book_name = @ $_GET['bookname'];
+=======
+            session_start();
+            include '../HomePage/header.php';
+            include '../database/connect.php';
+            $id = @ $_GET['book'];
+            $book_name = @ $_GET['bookname'];
+            if(empty($id) && !empty($book_name)){
+                $_SESSION['bookname'] = $book_name;
+            }else if(!empty($id) && empty($book_name)){
+                $_SESSION['id'] = $id;
+            }else{
+                $book_name = "%";
+            } 
+
+            $email = @ $_SESSION['email'];
+            $comment = @ $_GET['userInput'];
+            
+
+>>>>>>> ngocanh-4
             if(!empty($comment) && !empty($email)){
                 $pg_cmd = "SELECT * FROM \"User\" WHERE \"Email\" LIKE '" . $email . "'";
                 $pg_execute = pg_query($connect, $pg_cmd);
@@ -23,6 +43,7 @@
                 $pg_cmd = "INSERT INTO \"Comment\" (\"User_ID\", \"Book_ID\", \"Comment\") VALUES($1, $2, $3)";
                 pg_prepare($connect, "", $pg_cmd);
                 if(empty($id)){
+<<<<<<< HEAD
                     $pg_cmd = "SELECT * FROM \"Linrary\" WHERE \"BookName\" LIKE '" . $book_name . "'";
                     $pg_execute = pg_query($connect, $pg_cmd);
                     $row5 = pg_fetch_array($pg_execute);
@@ -47,6 +68,34 @@
             $row = pg_fetch_array($pg_execute);
         ?>
 <div class="content">
+=======
+                    // if(empty($book_name))
+                    //     $book_name = $_SESSION['bookname'];
+                    // $pg_cmd = "SELECT * FROM \"Library\" WHERE \"BookName\" LIKE '" . $book_name . "'";
+                    // $pg_execute = pg_query($connect, $pg_cmd);
+                    
+                    // $row5 = pg_fetch_array($pg_execute);
+                    // $id = $row5['Book_ID'];
+                    // $_SESSION['id'] = $id;
+                    $id = $_SESSION['id'];
+                }
+                
+                pg_query_params($connect, $pg_cmd, array($row4['User_ID'], $id, $comment));
+            }
+            
+            if(empty($id)){
+                $pg_cmd = "SELECT * FROM \"Library\" WHERE \"BookName\" LIKE '$book_name'";
+                
+            }else{
+                $pg_cmd = "SELECT * FROM \"Library\" WHERE \"Book_ID\" = $id";
+                
+            }
+            $pg_execute = pg_query($connect, $pg_cmd);
+            $row = pg_fetch_array($pg_execute);
+            $check = pg_num_rows($pg_execute);
+        ?>
+<div class="content" id = "content">
+>>>>>>> ngocanh-4
     <div class="product-image">
         <img src= <?php echo "../src/img/" . $row['Book_ID'] . ".jpg" ?> alt="">
     </div>
@@ -64,7 +113,23 @@
                 <p>Ngôn ngữ: Tiếng Anh</p>
             </div>
             <div class="upper_right">
+<<<<<<< HEAD
                 <button type="button">Borrow</button>
+=======
+                    <a href="
+                    <?php 
+                        $pg_cmd = "SELECT * FROM \"User\" WHERE \"Email\" LIKE '". $email ."'";
+                        $pg_execute = pg_query($connect, $pg_cmd);
+                        $row2 = pg_fetch_array($pg_execute);
+                        if($row2 == false){
+                            echo "../user_login.php";
+                        }else{
+                            echo "../Controller/borrow_book.php?book_id=" . $row['Book_ID'] . "&user_id=" . $row2['User_ID'];
+                        }
+                        
+                    ?>"
+                    ><button type="button">Borrow</button></a>
+>>>>>>> ngocanh-4
             </div>
             
         </div>
@@ -74,9 +139,27 @@
            <img src= <?php echo "../src/img/anh_" . $row['Book_ID'] . ".jpg" ?> alt="">
         </div>
     </div>
+<<<<<<< HEAD
 
 </div>
 <div class="comment">
+=======
+</div>
+<div class="comment" id = "comment">
+        <?php
+            if($check == 0){
+                echo "
+                    <script language='javascript'>
+                        var ul = document.querySelector(\"#content\");
+                        ul.style.display = \"none\";
+                        var ul = document.querySelector(\"#comment\");
+                        ul.style.display = \"none\";
+                        
+                    </script>
+                ";
+            }
+        ?>
+>>>>>>> ngocanh-4
         <h2>Comment</h2>
         <?php 
             $pg_cmd = "SELECT * FROM \"Comment\" WHERE \"Book_ID\" = " . $row['Book_ID'];
@@ -111,9 +194,17 @@
                 <p><a href="../user_login.php">Đăng nhập</  a> để bình luận sản phẩm!</p>
             </div>
         </form>
+<<<<<<< HEAD
 </div>
 <!----------------------------- footer ----------------------------------->
 <div style="width: 100%; float:left;">
+=======
+
+
+</div>
+<!----------------------------- footer ----------------------------------->
+<div style="width: 100%; float:left; display:block">
+>>>>>>> ngocanh-4
     <?php
         if(empty($_SESSION['email'])){
             echo "
@@ -134,6 +225,10 @@
                 </script>
             ";
         }
+<<<<<<< HEAD
+=======
+   
+>>>>>>> ngocanh-4
         include "../HomePage/footer.php";
     ?>
 </div>

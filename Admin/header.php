@@ -10,7 +10,11 @@
 </head>
 <?php
     session_start();
+<<<<<<< HEAD
     include '../Admin/Controller/check_admin_login.php';
+=======
+    include "../Admin/Controller/check_admin_login.php";
+>>>>>>> ngocanh-4
     $username = $_SESSION['username'];
     $password =  $_SESSION['password'];
 ?>

@@ -1,0 +1,143 @@
+.content{
+    margin-top: 150px;
+    width: 100%;
+    height: 500px;
+    background-color: rgb(248,248,248);
+}
+.side_bar{
+    margin-left: 20px;
+    width: 13%;
+    height: 500px;
+    float: left;
+    background-color: rgb(255,255,255);
+}
+.side_bar img{
+    width: 100%;
+    aspect-ratio: 1/0.7;
+    background-image: cover;
+}
+.side_bar p{
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+}
+.side_bar button{
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    font-size: 25px;
+    background-color: rgb(254,172,46);
+    border-radius: 10px;
+    border-style: hidden;
+    color: aliceblue;
+    cursor: pointer;
+}
+.side_bar_item{
+    height: 50px;
+    padding-top: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.side_bar_item:hover{
+    background-color: rgb(253,238,234);
+    color:  rgb(254,172,46);
+}
+.main_content{
+    float: right;
+    width: 80%;
+    aspect-ratio: 1/0.4;
+    background-color: rgb(255,255,255);
+}
+.info{
+
+    margin-left: 10%;
+    float: left;
+    border-radius: 10px;
+    border-color: rgb(254,172,46);
+    border-style: ridge;
+    width: 80%;
+    height: 450px;
+}
+.info_upper{
+    width: 100%;
+    height: 50px;
+    background-color:  rgb(254,172,46);
+    border-style: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.info_upper p{
+    float: left;
+    margin-top: 15px;
+    margin-left: 30px;
+    display: block;
+    color: aliceblue;
+    font-size: 20px;
+}
+.info_upper button{
+    float: right;
+    height: 100%;
+    width: 150px;
+    background-color: rgb(187, 207, 224);
+    margin-right: 100px;
+    border-style: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.info_box{
+    width: 40%;
+    margin-left: 5%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 75px;
+    float: left;
+}
+.info_box p{
+    font-size: 18px;
+    width: 70%;
+    height: 100%;
+}
+.change-index{
+    float: left;
+    display: block;
+    width: 45%;
+    margin-left: 2%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.change-index input{
+    width: 100%;
+}
+.change-button{
+    float: left;
+    width: 80px;
+    height: 30px;
+    font-size: 20px;
+    display: block;
+    margin-left: 2%;
+    border-radius: 10px;
+    border-style: hidden;
+    background-color: rgb(254,172,46);
+    color: white;
+    cursor: pointer;
+}
+.showBook{
+    margin-left: 5%;
+    margin-top: 20px;
+
+}
+.tableBook, th, td{
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+.tableBook{
+    
+    width: 80%;
+}
+.tableBook td{
+    height: 30px;
+    padding-left: 10px;
+}

@@ -1,6 +1,13 @@
 
 <body>
+<<<<<<< HEAD
 <?php include 'header.php'?>
+=======
+<?php
+    session_start();
+    include 'header.php'
+?>
+>>>>>>> ngocanh-4
         <section id="Slider">
             <div class="aspect-ratio-169">
                 <img src="../src/img/1.png">

@@ -32,6 +32,12 @@
 .bottom{
     height: 300px;
 }
+<<<<<<< HEAD
+=======
+.upper h1{
+    font-size: 20px !important;
+}
+>>>>>>> ngocanh-4
 .upper p{
     font-size: 15px;
     font-weight: 100;

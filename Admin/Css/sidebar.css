@@ -1,11 +1,20 @@
 .sMother_div{
     float: left;
+<<<<<<< HEAD
     width: 200px;
+=======
+    width: 10vw;
+    min-width: 120px;
+>>>>>>> ngocanh-4
     height: 100%;
     background-color:  rgb(38, 32, 42);
 }
 .sidebar_item{
+<<<<<<< HEAD
     width: 200px;
+=======
+    width: 10vw;
+>>>>>>> ngocanh-4
     height: 70px;
     cursor: pointer;
 }

@@ -10,13 +10,18 @@ CREATE TABLE IF NOT EXISTS public."Library"
     "Category" character varying(200) NOT NULL,
     "Version" smallint,
     "Author" character varying(200) NOT NULL,
+<<<<<<< HEAD
     "Public_Date" date NOT NULL,
     "Public_Company" character varying(200) NOT NULL,
     "Overview" character varying(200),
+=======
+    "Public_Company" character varying(200) NOT NULL,
+>>>>>>> ngocanh-4
     "Book_Status" boolean NOT NULL,
     PRIMARY KEY ("Book_ID")
 );
 
+<<<<<<< HEAD
 CREATE TABLE IF NOT EXISTS public."Book"
 (
     "Book_ID" serial NOT NULL,
@@ -26,6 +31,8 @@ CREATE TABLE IF NOT EXISTS public."Book"
     PRIMARY KEY ("Book_ID")
 );
 
+=======
+>>>>>>> ngocanh-4
 CREATE TABLE IF NOT EXISTS public."User"
 (
     "User_ID" serial NOT NULL,
@@ -57,6 +64,7 @@ CREATE TABLE IF NOT EXISTS public."Contact_Lib"
     PRIMARY KEY ("LibID")
 );
 
+<<<<<<< HEAD
 CREATE TABLE IF NOT EXISTS public."Request"
 (
     "Request_ID" serial NOT NULL,
@@ -66,13 +74,21 @@ CREATE TABLE IF NOT EXISTS public."Request"
     PRIMARY KEY ("Request_ID")
 );
 
+=======
+>>>>>>> ngocanh-4
 CREATE TABLE IF NOT EXISTS public."Comment"
 (
     "User_ID" serial NOT NULL,
     "Book_ID" serial NOT NULL,
     "Comment" character varying(1000) NOT NULL,
+<<<<<<< HEAD
     "Rating" smallint NOT NULL,
     PRIMARY KEY ("User_ID", "Book_ID")
+=======
+    "Time" character varying(200),
+    "Comment_ID" serial NOT NULL,
+    PRIMARY KEY ("User_ID", "Comment_ID")
+>>>>>>> ngocanh-4
 );
 
 CREATE TABLE IF NOT EXISTS public."Order"
@@ -80,8 +96,11 @@ CREATE TABLE IF NOT EXISTS public."Order"
     "Order_ID" serial NOT NULL,
     "User_ID" serial NOT NULL,
     "Book_ID" serial NOT NULL,
+<<<<<<< HEAD
     "TotalTime" integer NOT NULL,
     "Price" money NOT NULL,
+=======
+>>>>>>> ngocanh-4
     PRIMARY KEY ("Order_ID")
 );
 
@@ -113,6 +132,7 @@ ALTER TABLE IF EXISTS public."Library"
     NOT VALID;
 
 
+<<<<<<< HEAD
 ALTER TABLE IF EXISTS public."Book"
     ADD FOREIGN KEY ("Book_ID")
     REFERENCES public."Library" ("Book_ID") MATCH SIMPLE
@@ -129,6 +149,8 @@ ALTER TABLE IF EXISTS public."Request"
     NOT VALID;
 
 
+=======
+>>>>>>> ngocanh-4
 ALTER TABLE IF EXISTS public."Comment"
     ADD CONSTRAINT user_fk FOREIGN KEY ("User_ID")
     REFERENCES public."User" ("User_ID") MATCH SIMPLE

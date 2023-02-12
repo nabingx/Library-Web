@@ -5,7 +5,7 @@
 
 <html>
 <head>
-    <link rel="stylesheet" href="Css/category.css">
+    <link rel="stylesheet" href="Css/author.css">
 </head>
 <body>
     <div class = "cateMother_div">

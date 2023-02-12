@@ -52,7 +52,7 @@
 
         <a href="user.php"><div class="box">
             <p><?php echo $user_count; ?></<p>
-            <p>Total user requests</p> 
+            <p>Total users</p> 
         </div></a>
 
     </div>

@@ -1,16 +1,16 @@
 .cateMother_div{
     margin: 20px 50px;
     float: left;
-    width: 80% !important;
+    width: 60vw !important;
 }
 .title{
     display: block  ;
     float: left;
-    width: 100%;
+    width: 55vw;
 }
 
 .taskbar{
-    width: 66vw;
+    width: 55vw;
     height: 35px;
     border-style:solid;
     border-color: rgb(240, 240, 240);
@@ -22,8 +22,8 @@
     float: left;
 }
 .table{
-    width: 66vw;
-    height: 100vh;
+    width: 55vw;
+    height: 130vh;
     border-style:solid;
     border-color: rgb(240, 240, 240);
     background-color: #1F2739;
@@ -51,7 +51,7 @@
     border-color: rgb(240, 240, 240);
     background-color: white;
     border-radius: 5px;
-    width: 60vw;
+    width: 47vw;
     height: 25px;
 }
 .myForm .checkboxInput{
@@ -116,7 +116,7 @@
     padding: 0%;
     float: inherit;
     text-align: center;
-    width: 66vw;
+    width: 55vw;
     height: 30px;
     background-color: rgb(240, 240, 240);
 }

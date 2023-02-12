@@ -6,6 +6,7 @@
 }
 
 .taskbar{
+    min-width: 50%;
     width: 66vw;
     height: 35px;
     border-style:solid;
@@ -19,7 +20,7 @@
 }
 .table{
     width: 66vw;
-    height: 100vh;
+    height: 125vh;
     border-style:solid;
     border-color: rgb(240, 240, 240);
     background-color: #1F2739;

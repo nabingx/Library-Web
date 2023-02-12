@@ -87,7 +87,6 @@
     cursor: pointer;
 }
 .info_box{
-    display: none;
     width: 40%;
     margin-left: 5%;
     margin-bottom: 20px;
@@ -99,4 +98,46 @@
     font-size: 18px;
     width: 70%;
     height: 100%;
+}
+.change-index{
+    float: left;
+    display: block;
+    width: 45%;
+    margin-left: 2%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.change-index input{
+    width: 100%;
+}
+.change-button{
+    float: left;
+    width: 80px;
+    height: 30px;
+    font-size: 20px;
+    display: block;
+    margin-left: 2%;
+    border-radius: 10px;
+    border-style: hidden;
+    background-color: rgb(254,172,46);
+    color: white;
+    cursor: pointer;
+}
+.showBook{
+    margin-left: 5%;
+    margin-top: 20px;
+
+}
+.tableBook, th, td{
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+.tableBook{
+    
+    width: 80%;
+}
+.tableBook td{
+    height: 30px;
+    padding-left: 10px;
 }

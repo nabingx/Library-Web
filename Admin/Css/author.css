@@ -1,12 +1,8 @@
 .cateMother_div{
-    margin: 20px 50px;
+    padding: 0%;
+    margin: 0%;
     float: left;
-    width: 80% !important;
-}
-.title{
-    display: block  ;
-    float: left;
-    width: 100%;
+    padding-left: 10px;
 }
 
 .taskbar{
@@ -23,23 +19,21 @@
 }
 .table{
     width: 66vw;
-    height: 100vh;
+    height: 106vh;
     border-style:solid;
     border-color: rgb(240, 240, 240);
     background-color: #1F2739;
     border-radius: 5px;
     margin-top: 20px;
-    display: block  ;
-    float: left;
 }
 .myForm label{
     display: block;
     margin-left: 30px;
     margin-top: 20px;
-    width: 60vw;
+    width: 90%;
 }
 .half_lable{
-    width: 32vw;
+    width: 42%;
     float: none;
     display: inline !important;
 }
@@ -51,7 +45,7 @@
     border-color: rgb(240, 240, 240);
     background-color: white;
     border-radius: 5px;
-    width: 60vw;
+    width: 90%;
     height: 25px;
 }
 .myForm .checkboxInput{
@@ -62,12 +56,9 @@
     border-color: rgb(240, 240, 240);
     background-color: white;
     border-radius: 5px;
-    width: 25%;
-    height: 28px;
-    text-align: center;
-    color: #0E1119;
+    width: 20%;
+    height: 15px;
 }
-
 .myForm small{
     /* display: block; */
     float: left;
@@ -88,7 +79,7 @@
 .half_input{
     float: left;
     margin: 0%;
-    width: 30vw !important;
+    width: 40% !important;
 }
 .myForm button{
     cursor: pointer;
@@ -116,7 +107,7 @@
     padding: 0%;
     float: inherit;
     text-align: center;
-    width: 66vw;
+    width: 100%;
     height: 30px;
     background-color: rgb(240, 240, 240);
 }
@@ -124,7 +115,16 @@
 .noShow{
     display: none;
 }
-
+.page_foot{
+    text-align: center;
+}
+.page_foot a{
+    text-decoration: none;
+    color: azure;
+}
+.page_foot a:hover{
+    color:#2691d9;
+}
 .noShow2{
     display: block;
     width: 95%;
@@ -161,7 +161,12 @@
 
     }
 }
-
+/* --------------------------------------------------------------- */
+/*	
+	Table Responsive
+	===================
+	Author: https://github.com/pablorgarcia
+ */
 
  @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
  
@@ -217,12 +222,12 @@
  }
  
  .container {
-       text-align: left;
-       overflow: hidden;
-       width: 80%;
-       margin: 0 auto;
-   display: table;
-   padding: 0 0 8em 0;
+    text-align: left;
+    overflow: hidden;
+    width: 80%;
+    margin: 4% 7% 0;
+    padding: 0%;
+    display: table;
  }
  
  .container td, .container th {

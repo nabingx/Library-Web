@@ -8,9 +8,6 @@
         <link rel="stylesheet" href="/css/style.css">
         <title>Online Library</title>
     </head>
-    <?php 
-           session_start();   
-    ?>
     <body>
         <header>
             <div class="logo">
@@ -20,16 +17,15 @@
             <div class="menu">
                 <li><a href="category.php">Trending</a>
                     <ul class="sub-menu">
-                        <li><a href="a.php">Giáo trình</a></li>
-                        <li><a href="b.php">Truyện tranh</a></li>
-                        <li><a href="c.php">Tiểu thuyết</a></li>
-                        <li><a href="d.php">Tâm lý tình cảm</a></li>
+                        <li><a href="category.php?sort=BookName&cate=Sách+chính+trị&author=%">Sách chính trị</a></li>
+                        <li><a href="category.php?sort=BookName&cate=Sách+khoa+học&author=%">Sách khoa học</a></li>
+                        <li><a href="category.php?sort=BookName&cate=Sách+tham+khảo&author=%">Sách tham khảo</a></li>
+                        <li><a href="category.php?sort=BookName&cate=Tạp+chí&author=%">Tạp chí</a></li>
                     </ul>
                 </li>
                 
                 <li><a href="index.php">Trang chủ</a></li>
                 <li><a href="category.php">Mượn sách</a></li>
-                <li><a href="request.php">Hỗ trợ</a></li>
                 <li><a href="aboutUs.php">About</a></li>
             </div>
             <div class="others">
@@ -69,9 +65,9 @@
                         inp.value = value;
                     })
                 </script>
-                <li><a class ="fas fa-heart" href="../Homepage/profile.php?action="favorite\""></a></li>
+                <li><a class ="fas fa-heart" href="../Homepage/profile.php?action=mybook"></a></li>
                 
-                <li><a class ="fas fa-shopping-bag" href="../Homepage/profile.php?action="borrow\""></a></li>
+                <li><a class ="fas fa-shopping-bag" href="../Homepage/profile.php?action=mybook"></a></li>
                 <div class="menu">
                     <li><a class ="fas fa-user" href=""></a>
                         <ul class="sub-menu" id="not_login">

@@ -4,11 +4,7 @@
 </head>
 
 <?php
-    include '../Admin/header.php';
-    include '../Admin/sidebar.php';
-    include '../Admin/Controller/check_admin_login.php';
     include '../database/connect.php';
-    
 
     $pg_cmd = "SELECT * FROM \"Library\"";
     $pg_execute = pg_query($connect, $pg_cmd); 
@@ -21,46 +17,43 @@
     $pg_cmd = "SELECT DISTINCT \"Category\" FROM \"Library\"";
     $pg_execute = pg_query($connect, $pg_cmd);
     $category_count  = pg_num_rows($pg_execute);
+
+
+    $pg_cmd = "SELECT DISTINCT \"User_ID\" FROM \"User\"";
+    $pg_execute = pg_query($connect, $pg_cmd);
+    $user_count  = pg_num_rows($pg_execute);
+
+
 ?>
 <body>
     <div class = "dMother_div">
         <div>
             <h1>Dashboard</h1>
         </div>
-        <div class="box">
-            <a href="">
+        <a href="book.php"><div class="box">
+            
             <p><?php echo $book_count; ?></<p>
             <p>Total books</p> 
-            </a>
-        </div>
-        <div class="box">
-            <a href="">
+            
+        </div></a>
+        
+        <a href="author.php"><div class="box">
+            
             <p><?php echo $author_count; ?></<p>
             <p>Total authors</p> 
-            </a>
-        </div>
-        <div class="box">
-            <a href="category.php">
+            
+        </div></a>
+        <a href="category.php"><div class="box">
+            
             <p><?php echo $category_count; ?></<p>
             <p>Total categories</p> 
-            </a>
-        </div>
-        <div class="box">
-            <p>3</<p>
-            <p>Total users</p> 
-        </div>
-        <div class="box">
-            <p>3</<p>
-            <p>Total expired books</p> 
-        </div>
-        <div class="box">
-            <p>3</<p>
-            <p>Total ordered books </p> 
-        </div>
-        <div class="box">
-            <p>3</<p>
+            
+        </div></a>
+
+        <a href="user.php"><div class="box">
+            <p><?php echo $user_count; ?></<p>
             <p>Total user requests</p> 
-        </div>
+        </div></a>
 
     </div>
 </body>

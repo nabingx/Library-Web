@@ -1,6 +1,9 @@
 
 <body>
-<?php include 'header.php'?>
+<?php
+    session_start();
+    include 'header.php'
+?>
         <section id="Slider">
             <div class="aspect-ratio-169">
                 <img src="../src/img/1.png">

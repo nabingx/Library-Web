@@ -1,0 +1,27 @@
+.sMother_div{
+    float: left;
+    width: 200px;
+    height: 100%;
+    background-color:  rgb(38, 32, 42);
+}
+.sidebar_item{
+    width: 200px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.sidebar_item:hover a{
+    color :  rgb(27, 174, 24);
+}
+.sidebar_item a{
+    display: block;
+    padding-left: 10px;
+    text-decoration: none;
+    color: azure;
+    height: 50px;
+    padding-top: 20px;
+    width: 190px;
+}
+.sidebar_item a i{
+    width: 20px;
+}

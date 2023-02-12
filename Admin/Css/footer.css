@@ -1,0 +1,12 @@
+.fMother_div{
+    width: 100%;
+    min-height: 50px;
+    background-color: rgb(38, 32, 42);
+    display: flex;
+    flex-direction: column;
+}
+.fMother_div p{
+    font-size: 15px;
+    color: azure;
+    text-align: center;
+}

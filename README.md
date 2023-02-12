@@ -4,6 +4,7 @@
  	CÁC BƯỚC CHẠY PROJECT 
 I. Database
 - Database được sử dụng : PostgreSQL
+- Kết nối Database : Sửa thông tin kết nối trong file database/connect.php
 - Các bước khởi tạo database:
 	Bước 1 : Tạo database : Lệnh query trong file : createtable.sql
 	Bước 2 : Thêm dữ liệu : Thực hiện query lần lượt : add_data.sql -> add_book.sql

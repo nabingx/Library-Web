@@ -602,8 +602,7 @@ footer{
     width: 350px;
     height: 675px;
     top: -20px;        
-    left: 200px; 
-
+    left: 200px;
 }
 .form-signup
 {
@@ -612,4 +611,69 @@ footer{
 .title-head
 {
     background-color: #BF8A49;
+}
+
+/* Profile */
+
+.profile .profile-container .profile-home .home {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+    font-size: 40px;
+    color: #080808;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+.profile .profile-container .profile-home .home span {
+    display: block;
+    /* font-size: 0.5em; */
+    line-height: 1.3;
+    font-family: "Raleway", sans-serif !important;
+}
+.profile .profile-container .profile-home .home a {
+    display: block;
+    font-size: 0.5em;
+    line-height: 1.3;
+    font-family: "Raleway", sans-serif !important;
+}
+.profile .profile-container .profile-home .home em {
+    font-style: normal;
+    font-weight: 600;
+}
+.profile .profile-container .profile-home .home:before {
+    width: 33px;
+    height: 5px;
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    margin-left: -14px;
+    background-color: #b80000;
+}
+.profile .profile-container .profile-home .home:after {
+    width: 150px;
+    height: 1px;
+    display: block;
+    content: "";
+    position: relative;
+    margin-top: 15px;
+    left: 30%;
+    margin-left: -50px;
+    background-color: #b80000;
+}
+.profile-requst {
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 20px;
+    font-size: 1.1em;
+}
+.form-signup {
+    padding-left: 20px;
+    padding-top: 20px;
 }

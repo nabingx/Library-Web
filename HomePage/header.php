@@ -69,9 +69,9 @@
                         inp.value = value;
                     })
                 </script>
-                <li><a class ="fas fa-heart" href="profile.php?action=\"favorite\""></a></li>
+                <li><a class ="fas fa-heart" href="../Homepage/profile.php?action="favorite\""></a></li>
                 
-                <li><a class ="fas fa-shopping-bag" href="profle.php?action=\"borrow\""></a></li>
+                <li><a class ="fas fa-shopping-bag" href="../Homepage/profile.php?action="borrow\""></a></li>
                 <div class="menu">
                     <li><a class ="fas fa-user" href=""></a>
                         <ul class="sub-menu" id="not_login">
@@ -79,7 +79,7 @@
                             <li><a href="../user_register.php">Sign up</a></li>
                         </ul>
                         <ul class="sub-menu" id="already_login">
-                            <li><a href="../profile.php?action=\"info\"">Profile</a></li>
+                            <li><a href="../Homepage/profile.php?action="info\"">Profile</a></li>
                             <li><a href="../logout.php">Logout</a></li>
                         </ul>
                     </li>

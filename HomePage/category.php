@@ -150,9 +150,7 @@
             </p>
         </div>
     </form>
-</div>
-    
-    --------------------------- footer --------------------------------- -->
+</div>  
     <div style="height:20%; width:100%;float:left;">
     <?php include "../HomePage/footer.php" ?>
     <div>

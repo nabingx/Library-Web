@@ -1,32 +1,41 @@
+insert into "Category" ("Category_Name") VALUES ('Anime');
+insert into "Category" ("Category_Name") VALUES ('Truyen');
+insert into "Category" ("Category_Name") VALUES ('Sach');
+insert into "Category" ("Category_Name") VALUES ('Tieu Thuyet');
+
+insert into "Author" ("Author_Name") VALUES ('A');
+insert into "Author" ("Author_Name") VALUES ('B');
+insert into "Author" ("Author_Name") VALUES ('C Thuyet');
+
+insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview", "Book_Status")
+VALUES ('Abc', 'Anime', '1', 'A', '2000-02-01', 'Hanoi Company', 'sach nhu cac', true);
+insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview", "Book_Status")
+VALUES ('Abcd', 'Truyen', '1', 'B', '2000-02-01', 'Hanoi Company', 'sach nhu cac', true);
+insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview", "Book_Status")
+VALUES ('Abcde', 'Truyen', '1', 'A', '2000-02-01', 'Hanoi Company', 'sach nhu cac', true);
+insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview", "Book_Status")
+VALUES ('Abcdef', 'Tieu Thuyet', '1', 'C Thuyet', '2000-02-01', 'Hanoi Company', 'sach nhu cac', true);
+insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview", "Book_Status")
+VALUES ('afvas', 'Tieu Thuyet', '1', 'C Thuyet', '2000-02-01', 'Hanoi Company', 'sach nhu cac', true);
+insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview", "Book_Status")
+VALUES ('asdwqe', 'Tieu Thuyet', '1', 'C Thuyet', '2000-02-01', 'Hanoi Company', 'sach nhu cac', true);
+insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview", "Book_Status")
+VALUES ('gjhghj', 'Tieu Thuyet', '1', 'C Thuyet', '2000-02-01', 'Hanoi Company', 'sach nhu cac', true);
+insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview", "Book_Status")
+VALUES ('werwer', 'Anime', '1', 'B', '2000-02-01', 'Hanoi Company', 'sach nhu cac', true);
+insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview", "Book_Status")
+VALUES ('asdwdfhdgfqe', 'Anime', '1', 'A', '2000-02-01', 'Hanoi Company', 'sach nhu cac', true);
+insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview", "Book_Status")
+VALUES ('asdcvbncvbwqe', 'Truyen', '1', 'B', '2000-02-01', 'Hanoi Company', 'sach nhu cac', true);
+insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview", "Book_Status")
+VALUES ('11312563', 'Anime', '1', 'B', '2000-02-01', 'Hanoi Company', 'sach nhu cac', true);
+insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview", "Book_Status")
+VALUES ('asdf5623', 'Anime', '1', 'A', '2000-02-01', 'Hanoi Company', 'sach nhu cac', true);
+insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview", "Book_Status")
+VALUES ('asdfjghf498', 'Truyen', '1', 'A', '2000-02-01', 'Hanoi Company', 'sach nhu cac', true);
+select *from "Library"
+
+SELECT * FROM "Library"
+LIMIT 12 OFFSET 12;
+
 insert into "Admin" ("Email", "Password") VALUES ('root', '1');
-
-insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview")
-values ('Toán cao cấp 1', 'Giáo trình', '10', 'Nguyễn Văn A', '2008-06-01', 'Nhà Xuất Bản Hà Nội', 'not thing');
-
-insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview")
-values ('Toán cao cấp 2', 'Anime', '5', 'Nguyễn Văn B', '2006-01-05', 'Nhà Xuất Bản Hà Nội', 'not thing');
-
-insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview")
-values ('Toán cao cấp 3', 'Giáo trình', '4', 'Nguyễn Văn C', '2008-12-29', 'Nhà Xuất Bản Hà Nội', 'not thing');
-
-
-insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview")
-values ('Toán cao cấp 4', 'Tiểu thuyết', '3', 'Nguyễn Văn A', '2008-06-01', 'Nhà Xuất Bản Hà Nội', 'not thing');
-
-insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview")
-values ('Toán cao cấp 5', 'Tiểu thuyết', '3', 'Nguyễn Văn A', '2008-06-01', 'Nhà Xuất Bản Hà Nội', 'not thing');
-
-insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview")
-values ('Toán cao cấp 6', 'Giáo trình', '3', 'Nguyễn Văn D', '2008-06-01', 'Nhà Xuất Bản Hà Nội', 'not thing');
-
-insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview")
-values ('Toán cao cấp 7', 'Giáo trình', '3', 'Nguyễn Văn B', '2008-06-01', 'Nhà Xuất Bản Hà Nội', 'not thing');
-
-insert into "Library" ("BookName", "Category", "Version", "Author", "Public_Date", "Public_Company", "Overview")
-values ('Toán cao cấp 8', 'Tiểu thuyết', '3', 'Nguyễn Văn D', '2008-06-01', 'Nhà Xuất Bản Hà Nội', 'not thing');
-
-select DISTINCT "Author" from "Library";
-
-
-
-

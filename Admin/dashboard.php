@@ -4,7 +4,11 @@
 </head>
 
 <?php
+    include '../Admin/header.php';
+    include '../Admin/sidebar.php';
+    include '../Admin/Controller/check_admin_login.php';
     include '../database/connect.php';
+    
 
     $pg_cmd = "SELECT * FROM \"Library\"";
     $pg_execute = pg_query($connect, $pg_cmd); 

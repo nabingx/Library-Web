@@ -112,9 +112,9 @@
     }
     $check = checkLogin($connect, $username, $password);
     if($check == true){
-       $_SESSION['username'] = $username;
+       $_SESSION['email'] = $username;
        $_SESSION['password'] = $password;
-       header("location:logout.php");
+       header("location:Homepage/index.php");
     }
 ?>
 

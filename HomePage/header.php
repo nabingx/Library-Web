@@ -33,7 +33,13 @@
                 <li><a href="aboutUs.php">About</a></li>
             </div>
             <div class="others">
-                <li><input placeholder="Tìm kiếm" id="input-search" name = "search" type="text"><i><a class="fas fa-search" href="product.php?bookname="<?php $book_name = @ $_GET['search']; echo $book_name?>\""></a></i></li>
+                <!-- <li><input placeholder="Tìm kiếm" id="input-search" name = "search" type="text"><i><a class="fas fa-search" href="product.php?bookname="<?php $book_name = @ $_GET['search']; echo $book_name?>\""></a></i></li> -->
+                <li>
+                    <form action="product.php" method="get">
+                        <input placeholder="Tìm kiếm" id="input-search" name = "bookname" type="text"><i><a class="fas fa-search" href="product.php?bookname=<?php $book_name = @ $_GET['search']; echo $book_name;?>"></a></i></input>
+                        <input style="border-width:0;" id="submit" type="submit" value=""></input>
+                    </form>
+                </li>
                 <div id="error"></div>
                 <ul id="suggestions"></ul>
                 <script>

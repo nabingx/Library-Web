@@ -109,6 +109,14 @@
     margin-top: 5%;
     margin-left: 5%;
 }
+.sign_in{
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.sign_in a{ 
+    color: rgb(50, 81, 235);
+    cursor: pointer;
+}
 .UserComment p{
     display: block;
     float: left;

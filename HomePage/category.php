@@ -72,7 +72,6 @@
                 <select name="sort" id="sort">
                     <option value="BookName">Sắp xếp theo tên</option>
                     <option value="Author">Sắp xếp theo tác giả</option>
-                    <option value="Public_Date">Sắp xếp theo ngày xuất bản</option>
                 </select>
             </div>
             <div class="filter-content">
